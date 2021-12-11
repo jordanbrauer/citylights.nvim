@@ -1,4 +1,4 @@
-# citylights.vim
+# citylights.nvim
 
 A Neovim port of the beautiful [City Lights](https://citylights.xyz/) syntax
 theme by [Yummygum](https://yummygum.com/), built with [Colorbuddy](https://github.com/tjdevries/colorbuddy.nvim).
@@ -16,12 +16,6 @@ and then run the install command
 :PlugInstall
 ```
 
-and then load the theme!
-
-```vim
-lua require('colorbuddy').colorscheme('citylights')
-```
-
 ## Usage
 
 Ensure your syntax highlightig is enabled, dark mode engaged, and 256 terminal
@@ -33,4 +27,6 @@ syntax on
 
 set background=dark
 let &t_Co=256
+
+lua require('colorbuddy').colorscheme('citylights')
 ```
