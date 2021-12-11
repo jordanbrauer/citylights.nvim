@@ -192,13 +192,13 @@ Group.new("SignifyLineDelete", colors.red,    none, bold)
 Group.new("SignifySignChange", colors.yellow, none, bold)
 Group.new("SignifySignDelete", colors.red,    none, bold)
 
-Group.link("DiffAdd", "diffAdded")
-Group.link("DiffDelete", "diffRemoved")
+Group.link("DiffAdd", groups.diffAdded)
+Group.link("DiffDelete", groups.diffRemoved)
 
-Group.link("GitGutterAdd", "diffAdded")
-Group.link("GitGutterChange", "DiffChange")
-Group.link("GitGutterChangeDelete", "diffRemoved")
-Group.link("GitGutterDelete", "diffRemoved")
+Group.link("GitGutterAdd", groups.diffAdded)
+Group.link("GitGutterChange", groups.DiffChange)
+Group.link("GitGutterChangeDelete", groups.diffRemoved)
+Group.link("GitGutterDelete", groups.diffRemoved)
 
 -- =============================================================================
 -- LSP
@@ -229,10 +229,10 @@ Group.new("gitcommitSelectedFile",  colors.blue,  none, plain)
 -- HTML
 -- =============================================================================
 
-Group.link("htmlTag", "Special")
-Group.link("htmlEndTag", "htmlTag")
-Group.link("htmlTagName", "Define")
-Group.link("htmlArg", "Function")
+Group.link("htmlTag", groups.Special)
+Group.link("htmlEndTag", groups.htmlTag)
+Group.link("htmlTagName", groups.Define)
+Group.link("htmlArg", groups.Function)
 
 -- =============================================================================
 -- PHP
@@ -248,17 +248,17 @@ Group.new('phpParent',      colors.steel,  none, plain)
 Group.new('phpUseClass',    colors.steel,  none, plain)
 Group.new('phpMethodsVar',  colors.steel,  none, plain)
 
-Group.link("phpUseKeyword", "Keyword")
-Group.link("phpDocTags", "Keyword")
-Group.link("phpDocParam", "Type")
-Group.link("phpNullValue", "Constant")
-Group.link("phpDocIdentifier", "Identifier")
-Group.link("phpMethod", "phpFunction")
-Group.link("phpUseFunction", "phpUseClass")
-Group.link("phpUseNamespaceSeparator", "phpUseClass")
+Group.link("phpUseKeyword", groups.Keyword)
+Group.link("phpDocTags", groups.Keyword)
+Group.link("phpDocParam", groups.Type)
+Group.link("phpNullValue", groups.Constant)
+Group.link("phpDocIdentifier", groups.Identifier)
+Group.link("phpMethod", groups.phpFunction)
+Group.link("phpUseFunction", groups.phpUseClass)
+Group.link("phpUseNamespaceSeparator", groups.phpUseClass)
 
-Group.link("phpFunc", "Define")
-Group.link("phpDeclareDirectives", "Constant")
+Group.link("phpFunc", groups.Define)
+Group.link("phpDeclareDirectives", groups.Constant)
 
 -- =============================================================================
 -- JavaScript
@@ -268,19 +268,19 @@ Group.new('javascriptIdentifierName', colors.steel, none, plain)
 Group.new('javascriptObjectLabel',    colors.steel, none, plain)
 Group.new('javascriptParens',         colors.steel, none, plain)
 
-Group.link("javascriptComma", "javascriptParens")
-Group.link("javascriptEndColons", "javascriptParens")
-Group.link("javascriptBrackets", "javascriptParens")
-Group.link("javascriptBlock", "javascriptParens")
-Group.link("javascriptDotNotation", "javascriptParens")
-Group.link("javascriptAsyncFuncKeyword", "Define")
-Group.link("javascriptBraces", "javascriptParens")
-Group.link("javascriptOpSymbol", "Keyword")
-Group.link("javascriptOpSymbols", "Keyword")
-Group.link("javascriptObjectLabelColon", "Keyword")
-Group.link("javascriptFuncArg", "Identifier")
-Group.link("javascriptVariable", "Define")
-Group.link("javascriptFuncKeyword", "Define")
+Group.link("javascriptComma", groups.javascriptParens)
+Group.link("javascriptEndColons", groups.javascriptParens)
+Group.link("javascriptBrackets", groups.javascriptParens)
+Group.link("javascriptBlock", groups.javascriptParens)
+Group.link("javascriptDotNotation", groups.javascriptParens)
+Group.link("javascriptAsyncFuncKeyword", groups.Define)
+Group.link("javascriptBraces", groups.javascriptParens)
+Group.link("javascriptOpSymbol", groups.Keyword)
+Group.link("javascriptOpSymbols", groups.Keyword)
+Group.link("javascriptObjectLabelColon", groups.Keyword)
+Group.link("javascriptFuncArg", groups.Identifier)
+Group.link("javascriptVariable", groups.Define)
+Group.link("javascriptFuncKeyword", groups.Define)
 
 -- =============================================================================
 -- JSX
@@ -288,5 +288,5 @@ Group.link("javascriptFuncKeyword", "Define")
 
 Group.new('jsxAttrib', colors.aqua, none, plain)
 
-Group.link("jsxExpressionBlock", "javascriptBlock")
-Group.link("jsxTagName", "Define")
+Group.link("jsxExpressionBlock", groups.javascriptBlock)
+Group.link("jsxTagName", groups.Define)
