@@ -180,7 +180,7 @@ Group.new("StatusLineTermNC", none,         colors.black, plain)
 Group.new("CursorColumn", none,         colors.black, plain)
 Group.new("CursorLineNr", colors.white, none,         plain)
 Group.new("LineNr",       colors.grey,  none,         plain)
-Group.new("SignColumn",   none,         colors.black  plain)
+Group.new("SignColumn",   none,         colors.black, plain)
 Group.new('Folded',       colors.steel, none,         bold)
 Group.new('FoldColumn',   colors.steel, none,         bold)
 
