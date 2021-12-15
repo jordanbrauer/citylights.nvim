@@ -3,6 +3,10 @@
 A Neovim port of the beautiful [City Lights](https://citylights.xyz/) syntax
 theme by [Yummygum](https://yummygum.com/), built with [Colorbuddy](https://github.com/tjdevries/colorbuddy.nvim).
 
+<p align="center">
+  <img src="https://github.com/jordanbrauer/citylights.nvim/example/theme.png" alt="screenshot of theme colours on TypeScript code">
+</p>
+
 ## Installation
 
 ```vim
