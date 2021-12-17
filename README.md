@@ -31,6 +31,23 @@ syntax on
 
 set background=dark
 let &t_Co=256
+```
 
-lua require('colorbuddy').colorscheme('citylights')
+And using Lua, set the colour scheme like so
+
+```lua
+require('colorbuddy').colorscheme('citylights')
+```
+
+### Lualine
+
+If you are using [`lualine.nvim`](https://github.com/nvim-lualine/lualine.nvim),
+this colourscheme comes with a baked in theme & configuration that you can setup
+using the following Lua code in your configuartion.
+
+```lua
+local lualine = require('lualine')
+local citylights = require('lualine.themes.citylights')
+
+lualine.setup(citylights)
 ```
