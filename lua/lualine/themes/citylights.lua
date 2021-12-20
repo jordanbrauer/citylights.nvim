@@ -199,10 +199,53 @@ ins_left_c {
   cond = conditions.buffer_not_empty,
 }
 
-ins_right_x { 'encoding', cond = conditions.buffer_not_empty }
-ins_right_x { 'fileformat', icons_enabled = false, cond = conditions.buffer_not_empty }
-ins_right_x { 'filetype', cond = conditions.buffer_not_empty }
-ins_right_y { 'progress' }
-ins_right_z { 'location' }
+ins_right_x {
+    'encoding',
+    cond = conditions.buffer_not_empty
+}
+
+ins_right_x {
+    'fileformat',
+    icons_enabled = false,
+    cond = conditions.buffer_not_empty
+}
+
+ins_right_x {
+    'filetype',
+    cond = conditions.buffer_not_empty
+}
+
+ins_right_x {
+  -- Lsp server name .
+  function()
+    local msg = ''
+    local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
+    local clients = vim.lsp.get_active_clients()
+
+    if next(clients) == nil then
+      return msg
+    end
+
+    for _, client in ipairs(clients) do
+      local filetypes = client.config.filetypes
+
+      if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
+        return client.name
+      end
+    end
+
+    return msg
+  end,
+  icon = ' ',
+  color = { fg = colors.steel },
+  cond = conditions.hide_in_width
+}
+
+ins_right_z {
+    function ()
+        return '%3l:%-2v %3p%%'
+    end,
+    icon = '',
+}
 
 return config
