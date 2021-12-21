@@ -9,6 +9,22 @@ theme by [Yummygum](https://yummygum.com/), built with [Colorbuddy](https://gith
 
 ## Installation
 
+### With Packer
+
+```vim
+use {
+      "jordanbrauer/citylights.nvim",
+      requires = {
+        "tjdevries/colorbuddy.vim"
+      },
+      config = function()
+        require("colorbuddy").colorscheme("citylights")
+      end
+}
+```
+
+### With vim-plug
+
 ```vim
 Plug 'tjdevries/colorbuddy.vim'
 Plug 'jordanbrauer/citylights.nvim'
